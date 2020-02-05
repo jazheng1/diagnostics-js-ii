@@ -9,6 +9,18 @@
 
 function perfectShuffle(array) {
   // This is your job. :)
+  let halfDeck = array.length/2;
+  let shuffledDeck = [];
+  for (let i = 0; i < halfDeck; i++) {
+    shuffledDeck.push(array[i]);
+    if((halfDeck + i) < array.length){
+      shuffledDeck.push(array[halfDeck + i]);
+    } else {
+      shuffledDeck.push(array[array.length-1]);
+    }
+  }
+
+  return shuffledDeck;
 }
 
 let sanityCheck = require('./sanityCheck');

@@ -10,7 +10,10 @@
  */
 function timesTable13(n) {
   // This is your job. :)
-
+  for(let i = 1; i <= n; i++){
+    let product = 13 * i;
+    console.log('13 times ' + i + ' is ' + product);
+  }
   // Use console.log to print out statements like "13 times 5 is 65"
 }
 
