@@ -9,21 +9,17 @@
 
 function perfectShuffle(array) {
   // This is your job. :)
-  let firstHalfDeck = [];
-  let secondHalfDeck = [];
   let halfDeck = array.length/2;
   let shuffledDeck = [];
-  for (let i = 0; i < array.length; i++) {
-    if (i < halfDeck){
-      firstHalfDeck.push(array[i])
+  for (let i = 0; i < halfDeck; i++) {
+    shuffledDeck.push(array[i]);
+    if((halfDeck + i) < array.length){
+      shuffledDeck.push(array[halfDeck + i]);
     } else {
-      secondHalfDeck.push(array[i]);
+      shuffledDeck.push(array[array.length-1]);
     }
   }
-  for(let j = 0; j < firstHalfDeck.length; j++) {
-    shuffledDeck.push(firstHalfDeck[j]);
-    shuffledDeck.push(secondHalfDeck[j]);
-  }
+
   return shuffledDeck;
 }
 
